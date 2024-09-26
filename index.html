@@ -3,94 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-        }
-        .projects, .skills {
-            margin: 20px 0;
-        }
-        .project {
-            margin-bottom: 10px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Petroleum Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <h1>Engr. Muzammil Gilani/h1>
-            <p>Petroleum Engineer</p>
-    </header>
-
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I am Muzammil Gilani, a Petroleum Reservoir Engineer with expertise in reservoir simulation and engineering. Welcome to my portfolio!</p>
-    </section>
-
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1: Reservoir Simulation Study</h3>
-            <p>Details about the project and tools used (e.g., Eclipse, Petrel, CMG, etc.).</p>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-title">
+                <a href="#" style="font-style: italic;">Engr. Muzammil Gilani</a>
+            </div>
+            <div class="navbar-toggle" onclick="toggleNavbar()">
+                <span class="hamburger-icon">&#9776;</span> <!-- Hamburger icon -->
+            </div>
+            <div class="navbar-links" id="navbarLinks">
+                <ul>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#skills">Contact</a></li>
+                    <li><a href="#" class="button">Download CV</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="project">
-            <h3>Project 2: Well Performance Analysis</h3>
-            <p>Details about the project and contributions to the well performance analysis.</p>
-        </div>
-        <!-- Add more projects here -->
-    </section>
+    </nav>
+    <div class="full-page">
+        <section class="hero">
+            <div class="hero-content">
+              <div class="hero-left">
+                <p>Hey there, <span>Salam! 👋</span></p>
+                <h1>I'm Engr. Muzammil Gilani</h1>
+                <h2>Reservoir Engineer with skills in XYZ, ABC, and more...</h2>
+                <div class="hero-buttons">
+                  <a href="#portfolio" class="btn">Portfolio</a>
+                  <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+              </div>
+              <div class="hero-right">
+                <img src="./assets/profile.png" alt="Engr. Muzammil Gilani" class="hero-image">
+              </div>
+            </div>
+          </section>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Reservoir Engineering</li>
-            <li>Petroleum Simulation Software (Eclipse, Petrel)</li>
-            <li>Data Analysis and Modeling</li>
-            <li>Project Management</li>
-        </ul>
-    </section>
 
-    <footer>
-        <p>Contact: <a href="mailto:muzammil@example.com">muzammil@example.com</a></p>
-    </footer>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script>
+function toggleNavbar() {
+    const navbar = document.getElementById('navbarLinks');
+    navbar.classList.toggle('show-links'); // Toggle the visibility of the navbar links
+}
+
+// Function to close the navbar
+function closeNavbar() {
+    const navbar = document.getElementById('navbarLinks');
+    navbar.classList.remove('show-links'); // Remove the class to hide the navbar
+}
+
+// Add event listeners to the links
+document.querySelectorAll('.navbar-links a').forEach(link => {
+    link.addEventListener('click', closeNavbar); // Close navbar on link click
+});
+
+
+    </script>
 </body>
+
 </html>
